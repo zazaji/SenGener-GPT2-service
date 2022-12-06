@@ -3,7 +3,7 @@ A data service support to SenGener, a GPT2 text-generation Plugin of Obsidian.
 This is just a sample service. 
 
 It provides 3 protocol:
-### `/func`  which models is valid.
+### `/func` Get which model is valid.
 
 - method: get 
 - response:
@@ -14,7 +14,7 @@ It provides 3 protocol:
  }
 ```
 
-###  `/generate`  main protocol
+###  `/generate`  Main protocol to generate optional text
 - method: post
 - post:
 ```json
@@ -33,23 +33,24 @@ It provides 3 protocol:
 ```
 - response:
 ```json
-{"keywords":"",
- "page":0,
- "ref":[
-		 {
-			 "content":"深山闻<b class=\"match term0\">鸟语</b>",
-			 "title":"佚名"
-		 }
-	 ],
- "sentences":[
-		 {"value":"落日彩云斜"},
-		 {"value":"林影意踌躇"}
-	 ]
+{
+    "keywords":"",
+    "page":0,
+    "ref":[
+    	    {
+                "content":"深山闻<b class=\"match term0\">鸟语</b>",
+                "title":"佚名"
+            }
+        ],
+    "sentences":[
+        	{"value":"落日彩云斜"},
+                {"value":"林影意踌躇"}
+        ]
  }
 ```
 
 
-###  `/refer`  full-text search
+###  `/refer`  Full-text search
 - method: post
 - post:
 ```json
