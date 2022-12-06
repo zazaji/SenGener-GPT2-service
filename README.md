@@ -8,7 +8,10 @@ It provides 3 protocol:
 - method: get 
 - response:
 ```json
-{poem: "poem", english: "english"}
+{
+	"poem": "poem", 
+	 "english": "english"
+ }
 ```
 
 ###  `/generate`  main protocol
@@ -16,21 +19,33 @@ It provides 3 protocol:
 - post:
 ```json
 {
-    article_type: "poem",
-    context: "和风鸟语噪，",
-    is_index: true,
-    max_length: 10,
-    max_time: 1.2,
-    model_size: "distilgpt2/small",
-    number: 3,
-    temperature: 1,
-    token: "123456789a"
-    top_p: 0.9
+    "article_type": "poem",
+    "context": "和风鸟语噪，",
+    "is_index": true,
+    "max_length": 10,
+    "max_time": 1.2,
+    "model_size": "distilgpt2/small",
+    "number": 3,
+    "temperature": 1,
+    "token": "123456789a"
+    "top_p": 0.9
 }
 ```
 - response:
 ```json
-{"keywords":"","page":0,"ref":[{"content":""深山闻<b class=\"match term0\">鸟语</b>","title":"佚名"}],"sentences":[{"value":"落日彩云斜"},{"value":"林影意踌躇"}]}
+{"keywords":"",
+ "page":0,
+ "ref":[
+		 {
+			 "content":""深山闻<b class=\"match term0\">鸟语</b>",
+			 "title":"佚名"
+		 }
+	 ],
+ "sentences":[
+		 {"value":"落日彩云斜"},
+		 {"value":"林影意踌躇"}
+	 ]
+ }
 ```
 
 
@@ -39,9 +54,9 @@ It provides 3 protocol:
 - post:
 ```json
 {
-    article_type: "poem",
-    context: "鸟语",
-    page: 1
+    "article_type": "poem",
+    "context": "鸟语",
+    "page": 1
 }
 ```
 - response:
@@ -49,7 +64,12 @@ It provides 3 protocol:
 {
     "pagei": 1,
     "page":11,
-    "ref":[{"content":""深山闻<b class=\"match term0\">鸟语</b>","title":"佚名"}]
+    "ref":[
+	    {
+		    "content": "深山闻<b class=\"match term0\">鸟语</b>",
+		    "title":"佚名"
+	    }
+    ]
 }
 ```
 
