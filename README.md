@@ -37,7 +37,7 @@ It provides 3 protocol:
  "page":0,
  "ref":[
 		 {
-			 "content":""深山闻<b class=\"match term0\">鸟语</b>",
+			 "content":"深山闻<b class=\"match term0\">鸟语</b>",
 			 "title":"佚名"
 		 }
 	 ],
