@@ -7,8 +7,8 @@ modelpath='./model/'
 print('AutoTokenizer loading...',modelpath)
 tokenizer = AutoTokenizer.from_pretrained(modelpath)
 model = AutoModelForCausalLM.from_pretrained(modelpath)
-
-def generate_text(text='',length=10, number=3):
+length=40,  text=text, 
+def generate_text(text='',length=10, number=3,temperature=0.9, top_k=60, seed=42,  article_type='poem'):
     texts= generate_words(model,tokenizer,text,length,number)
     return texts
 
@@ -19,10 +19,8 @@ def generate_words(model,tokenizer,text,max_new_tokens,number):
                                     return_dict_in_generate=True,
                                     output_scores=True,
                                     max_new_tokens=max_new_tokens,
-                                    # max_new_tokens=80,
                                     do_sample=True,
-                                    top_p = 0.6,
-                                    # num_beams=5,
+                                    top_p = 0.9,
                                     eos_token_id=50256,
                                     pad_token_id=0,
                                     num_return_sequences = number)
