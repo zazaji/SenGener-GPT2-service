@@ -1,0 +1,12 @@
+Flask
+Flask_Cache
+Flask_Cors
+numpy
+pandas
+transformers
+pytorch_transformers
+scikit_learn
+torch
+tqdm
+jieba
+whoosh
